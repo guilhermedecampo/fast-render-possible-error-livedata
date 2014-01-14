@@ -1,0 +1,45 @@
+<template name="admin">
+  <section class="content container">
+  <article class="createSediArticle">
+    <div class="pattern">
+        <div class="pattern-body">
+            <input type="text" id="title" autocomplete="off" maxlength="40" placeholder="Title" value="{{titleStore}}"/>
+            <textarea  id="content" placeholder="Content">{{contentStore}}</textarea>
+        </div>
+
+        <div class="pattern-footer">
+              <div class="save">
+                <button  id="submitPost">post</button>
+              </div>
+        </div>
+    </div>
+  </article>
+  </section>
+  <section class="content container">
+    <h2>Articles</h2>
+          {{#each list}}
+          <a class="listPattern" href="/{{slug}}">
+          <div class="pattern">
+              <div class="pattern-body">
+                  <h1 class="titleList" >{{title}}</h1>
+                  <p>{{{content}}}</p>
+              </div>
+              <div class="pattern-footer">
+                  <span class="">
+                      <div class="wrapper">
+                      <p class="date"><b class="black">Created at:</b> {{createdAt}} - </p>
+                      </div>
+                  </span>
+              </div>
+          </div>
+          </a>
+          {{/each}}
+        </section>
+  </section>
+
+</template>
+
+
+
+
+

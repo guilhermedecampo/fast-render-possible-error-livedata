@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "fast-render": {},
+    "iron-router": {},
+    "nprogress": {},
+    "urlify2": {},
+    "moment": {}
+  }
+}
